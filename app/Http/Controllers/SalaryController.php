@@ -14,7 +14,7 @@ class SalaryController extends Controller
         $salaries = Salary::with(['user', 'department'])->get();
         return view('admin.salaries.index', compact('salaries'));
     }
-
+    
     public function create()
     {
         $users = User::all();
@@ -33,7 +33,6 @@ class SalaryController extends Controller
             'year' => 'required|integer|min:2000',
             'basic_salary' => 'required|numeric|min:0',
             'leave_deductions' => 'required|numeric|min:0',
-            // Add more validation rules as needed
         ]);
 
         // Calculate total salary

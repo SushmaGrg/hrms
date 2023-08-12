@@ -54,11 +54,6 @@ class User extends Authenticatable
         return $this->hasMany(Attendance::class);
     }
 
-    public function role()
-    {
-        return $this->belongsTo(Role::class);
-    }
-
     public function timeEntries()
     {
         return $this->hasMany(TimeEntry::class);

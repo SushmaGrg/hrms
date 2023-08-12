@@ -50,8 +50,8 @@ return view('admin.leaves.index', compact('leaves', 'user'));
 
     Leave::create($leaveData);
     
-        // return redirect()->route('leaves.index')->with('success', 'Leave request submitted successfully');
-        return redirect()->back()->with('success', 'Leave request submitted  successfully.');
+        return redirect()->route('leaves.index')->with('success', 'Leave request submitted successfully');
+        // return redirect()->back()->with('success', 'Leave request submitted  successfully.');
     }
 
 
@@ -111,41 +111,5 @@ return view('admin.leaves.index', compact('leaves', 'user'));
     }
 
     
-    // public function show(Leave $leave)
-    // {
-    //     return view('admin.leaves.show', compact('leave'));
-    // }
-
-    // public function edit(Leave $leave)
-    // {
-    //     return view('admin.leaves.edit', compact('leave'));
-    // }
-
-    // public function update(Request $request, Leave $leave)
-    // {
-    //     // Validate the input data
-    //     $validatedData = $request->validate([
-    //         'user_id' => 'required|exists:users,id',
-    //         'start_date' => 'required|date',
-    //         'end_date' => 'required|date|after_or_equal:start_date',
-    //         'reason' => 'required',
-    //     ]);
-
-    //     // Update the leave application
-    //     $leave->update([
-    //         'start_date' => $validatedData['start_date'],
-    //         'end_date' => $validatedData['end_date'],
-    //         'reason' => $validatedData['reason'],
-    //         // Other leave data
-    //     ]);
-
-    //     return redirect()->route('leaves.index')->with('success', 'Leave application updated successfully.');
-    // }
-
-    // public function destroy(Leave $leave)
-    // {
-    //     $leave->delete();
-        
-    //     return redirect()->route('leaves.index')->with('success', 'Leave application deleted successfully.');
-    // }
+    
 }

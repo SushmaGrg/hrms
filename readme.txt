@@ -6,3 +6,5 @@
 
 <!-- run this command in addition -->
 php artisan db:seed
+
+

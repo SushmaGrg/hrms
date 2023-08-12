@@ -19,10 +19,10 @@
             <div class="row">
                 <div class="col-lg-12">
 
-                    <div class="card">
+                    <div class="card overflow-auto">
                         <div class="card-body">
                             <!-- Table with stripped rows -->
-                            <table class="table ">
+                            <table class="table  ">
                             {{-- <table class="table datatable "> --}}
                              <div>
                                     @if (session('success'))

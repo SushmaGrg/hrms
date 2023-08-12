@@ -47,11 +47,12 @@
                             @enderror
                             </div>
                             <div class="col-md-12">
-                                <input class="form-control" type="number" name="basic_salary" step="0.01" placeholder="Basic Salary" value="{{$users->basic_salary ? $users->basic_salary : ""}}">
+                                <input class="form-control" type="number" name="basic_salary" step="0.01" placeholder="Basic Salary" value="{{ $user->basic_salary ?? "" }}">
                                 @error('basic_salary')
-                                <small class="text-danger"> {{ $message }}</small>
-                            @enderror
+                                <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
+                            
                             <div class="col-md-12">
                                 <input class="form-control"  type="number" name="leave_deductions" placeholder="Leave Deductions" step="0.01">
                                 @error('leave_deductions')
